@@ -1,0 +1,8 @@
+﻿Check,Result,Count,Detail
+Source product IDs,Pass,1000,All product IDs are unique; one row per source product
+Repeated brand / product names,Review,8,Retained as separate records; names alone do not establish duplicate formulas
+Ingredient names normalized,Cleaned,918,Unicode NFC; invisible characters removed; repeated whitespace collapsed
+Unrated ingredient entries,Missing metadata,11625,Missing source ratings preserved as Unrated; no safety score imputed
+Concentrations not supplied,Missing metadata,17407,"Unknown concentration remains null, never zero"
+Images unavailable locally,Coverage,0,Image availability verified against images folder
+Repeated ingredients within formulas,Review,17,Occurrences retained by source position; product reach uses distinct product IDs

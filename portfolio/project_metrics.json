@@ -1,0 +1,8 @@
+{
+  "products": 1000,
+  "brands": 474,
+  "ingredients": 2702,
+  "ingredient_entries": 17442,
+  "alcohol_tagged_pct": 0.967,
+  "fragrance_tagged_pct": 0.621
+}

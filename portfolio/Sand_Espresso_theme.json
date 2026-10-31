@@ -1,0 +1,71 @@
+{
+  "name": "Beauty | Sand & Espresso",
+  "dataColors": [
+    "#493126",
+    "#AA7953",
+    "#C5A27E",
+    "#886B54",
+    "#DCC5AA",
+    "#B5906C",
+    "#E8D6C1",
+    "#6E4C38"
+  ],
+  "background": "#F3EADF",
+  "foreground": "#4D382D",
+  "tableAccent": "#AA7953",
+  "textClasses": {
+    "callout": {
+      "fontFace": "Segoe UI Semibold",
+      "color": "#493123",
+      "fontSize": 32
+    },
+    "title": {
+      "fontFace": "Georgia",
+      "color": "#493126",
+      "fontSize": 13
+    },
+    "label": {
+      "fontFace": "Segoe UI",
+      "color": "#796554",
+      "fontSize": 10
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#FFFCF7"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "visualHeader": [
+          {
+            "show": false
+          }
+        ],
+        "border": [
+          {
+            "show": false
+          }
+        ],
+        "title": [
+          {
+            "fontColor": {
+              "solid": {
+                "color": "#33251E"
+              }
+            },
+            "fontSize": 13,
+            "fontFamily": "Segoe UI Semibold"
+          }
+        ]
+      }
+    }
+  }
+}

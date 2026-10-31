@@ -1,0 +1,61 @@
+{
+  "source": "Data/beauty_data.jsonl",
+  "source_sha256": "e3e86be34ffcf2a10b27d888e1b35996205299c98257fc948be8e9eafaf38173",
+  "raw_products": 1000,
+  "clean_products": 1000,
+  "brands": 474,
+  "ingredient_entries": 17442,
+  "unique_ingredient_names": 2702,
+  "name_pair_review_groups": 4,
+  "checks": [
+    {
+      "Check": "Source product IDs",
+      "Result": "Pass",
+      "Count": 1000,
+      "Detail": "All product IDs are unique; one row per source product"
+    },
+    {
+      "Check": "Repeated brand / product names",
+      "Result": "Review",
+      "Count": 8,
+      "Detail": "Retained as separate records; names alone do not establish duplicate formulas"
+    },
+    {
+      "Check": "Ingredient names normalized",
+      "Result": "Cleaned",
+      "Count": 918,
+      "Detail": "Unicode NFC; invisible characters removed; repeated whitespace collapsed"
+    },
+    {
+      "Check": "Unrated ingredient entries",
+      "Result": "Missing metadata",
+      "Count": 11625,
+      "Detail": "Missing source ratings preserved as Unrated; no safety score imputed"
+    },
+    {
+      "Check": "Concentrations not supplied",
+      "Result": "Missing metadata",
+      "Count": 17407,
+      "Detail": "Unknown concentration remains null, never zero"
+    },
+    {
+      "Check": "Images unavailable locally",
+      "Result": "Coverage",
+      "Count": 0,
+      "Detail": "Image availability verified against images folder"
+    },
+    {
+      "Check": "Repeated ingredients within formulas",
+      "Result": "Review",
+      "Count": 17,
+      "Detail": "Occurrences retained by source position; product reach uses distinct product IDs"
+    }
+  ],
+  "rules": [
+    "Original JSONL and empty CSV are unchanged",
+    "Do not merge product names or ingredient aliases without evidence",
+    "Tags describe supplied catalog labels; absent tag is not evidence of ingredient presence",
+    "Source ingredient ratings are annotations, not clinical evidence or product safety scores",
+    "No date, price, sales, review score or clinical outcome exists in this dataset"
+  ]
+}
